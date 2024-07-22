@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<p id="Sai" onclick="gayathri()">Hello baby good mrg .......have a nice day</p>
+	<button id="mango" onclick="andra()">login</button>
+	<button onclick="alert('login successfully')">login</button>
+	<button onclick="gayathri1()">Click Me</button>
+	<p id="mango1">How R You?</p>
+	<input type="number" id="myage" value="">
+	<button onclick="gaya3()"> Check result</button>
+
+
+</body>
+	<script>
+		function gayathri()
+		{
+			document.getElementById('Sai').innerHTML="Happy sunday";
+		}
+		function andra()
+		{
+			document.getElementById('mango').innerHTML="Welcome to CIET";
+		}
+		function gayathri1()
+
+		{
+			var a;
+			if(confirm('Tell me ur answer!'))
+			{
+				a="I am waiting for reply";
+			}
+			else
+			{
+				a="no baby, i can't say ok!";
+			}
+			document.getElementById('mango1').innerHTML=a;
+
+		}
+		function gaya3()
+		{
+			var result;
+			var c=document.getElementById('myage').value;
+			if (c>18) 
+			{
+				alert("Yes you are eligible");
+			}
+			else
+			{
+				alert("sry u r not eligible");
+			}
+		}
+	</script>
+</html>
