@@ -1,0 +1,127 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+div class="container p-5 mb-5 text-align-center">
+  <div class="row">
+    <div class="col">
+      <h1 >Prime OR Not</h1>
+      Enter a number:<input type="text" id="inputNumber" name="inputNumber"><br>
+    <button onclick="checkPrime()">Check</button>
+    <br><br>
+    <div id="outputResult"></div>
+</div</body>
+ <script>
+        function isPrime(num) {
+            if (num <= 1) return false;  
+            if (num === 2) return true;   
+            if (num % 2 === 0) return false;  
+
+           
+            for (let i = 3; i <= Math.sqrt(num); i += 2) {
+                if (num % i === 0) return false;  
+            }
+            return true; 
+        }
+
+        function checkPrime() {
+            let c = document.getElementById("inputNumber").value;
+            let k = document.getElementById("outputResult");
+
+            // Convert input value to integer
+            let num = parseInt(c);
+
+            if (isNaN(num)) {
+                k.textContent = "Please enter a valid number.";
+            } else {
+                if (isPrime(num)) {
+                    k.textContent = num+'is a prime number.';
+                } else {
+                    k.textContent = num+'is not a prime number.';
+                }
+            }
+        }
+    </script>
+
+    </div>
+    <div class="col">
+      <h1>Leap Year Or Not</h1>
+      <label for="inputYear">Enter a year:</label>
+    <input type="text" id="inputYear" name="inputYear"><br>
+    <button onclick="checkLeapYear()">Check</button>
+    <br><br>
+    <div id="outputResult"></div>
+
+ <script>
+        function isLeapYear(year) {
+            // Leap year logic
+            if (year % 4 === 0) {
+                if (year % 100 === 0) {
+                    if (year % 400 === 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true; 
+                }
+            } else {
+                return false; 
+            }
+        }
+        function checkLeapYear() {
+            let c= document.getElementById("inputYear").value;
+            let k= document.getElementById("outputResult");
+            let year = parseInt(c);
+            if (isNaN(year)) {
+                k.textContent = "Please enter a valid year.";
+            } else {
+                if (isLeapYear(year)) {
+                    k.textContent = year+"is a leap year.";
+                } else {
+                    k.textContent = year+"is not a leap year.";
+                }
+            }
+        }
+    </script>
+
+    </div>
+    <div class="col">
+      <h1>Palindrome Or Not</h1>
+<label for="inputText">Enter a number or string:</label>
+    <input type="text" id="inputText" name="inputText"><br>
+    <button onclick="checkPalindrome()">Check</button>
+    <br><br>
+    <div id="outputResult"></div>
+
+   <script>
+        function isPalindrome(input) {
+            let cleanedInput = input.toLowerCase().replace(/[\W_]/g, '');
+            let reversedInput = cleanedInput.split('').reverse().join('');
+            return cleanedInput === reversedInput;
+        }
+
+        function checkPalindrome() {
+            let input = document.getElementById("inputText").value;
+            let o= document.getElementById("outputResult");
+
+            if (isPalindrome(input)) {
+                o.textContent = input+" is a palindrome.";
+            } else {
+                o.textContent = input+" is not a palindrome.";
+            }
+        }
+    </script>
+
+    </div>
+
+  </div>
+  
+
+
+</div>
+</html>
