@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lemon Count</title>
+</head>
+<body>
+    <label for="number">Enter number of lemons:</label>
+    <input type="number" id="number" value="">
+    <button onclick="gaya()">SUBMIT</button>
+
+    <p id="output"></p>
+
+    <script>
+        function gaya() {
+            var a = parseInt(document.getElementById('number').value);
+            var output = document.getElementById('output');
+            
+            if (a<0) {
+                output.textContent = "Enter valid data";
+            } else if (a == 21) {
+                output.textContent = "There are sufficient number of lemons";
+            } else if (a < 21) {
+                var c = 21 - a;
+                output.textContent = c + " lemons needed";
+            } else { // assuming a > 21
+                var d = a - 21;
+                output.textContent = d + " are extra";
+            }
+            
+        }
+    </script>
+</body>
+</html>
