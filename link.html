@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+	<h1>start your exam!</h1>
+
+<body>
+	<div class="timer">
+            Time remaining: <span id="countdown">60</span> seconds 
+        </div>
+    </div>
+	<script>
+        
+        let timeLeft = 60; 
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.history.back(); 
+            } else {
+                countdownElement.textContent = timeLeft;
+                timeLeft--;
+            }
+        }, 1000); 
+    </script>
+  <p>1.what is capital of telangana?</p>
+   <input type="radio" id="hyd" name="capital" value="hyd">
+ <label for="hyd">Hyderabad</label><br>
+ <input type="radio" id="chy" name="capital" value="Chy">
+ <label for="chy">Chennai</label><br>
+<input type="radio" id="ama" name="capital" value="ama">
+ <label for="ama">Amaravati</label>
+
+  <br>  
+
+  <p>2.what is your age?</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">0 - 30</label><br>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">31 - 60</label><br>  
+  <input type="radio" id="age3" name="age" value="100">
+  <label for="age3">61 - 100</label><br><br>
+
+            </body>
+		<html>
