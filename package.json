@@ -1,0 +1,21 @@
+{
+  "name": "gayathrinodejsproject",
+  "version": "1.0.0",
+  "description": "creating api",
+  "main": "server.js",
+  "scripts": {
+    "test": "basic npm commands"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "console"
+  ],
+  "author": "gayathri",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "upper-case": "^3.0.0"
+  }
+}
